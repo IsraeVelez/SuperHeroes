@@ -3,5 +3,12 @@
 </h1>
 <ul>
 <li *ngFor="let heroe of heroes; let i = index">
-  {{ i + 1 }} - {{ heroe }}
+  {{ i + 1 }} - {{ heroe }} <button (click)="removeItem(indice)"> Borrar</button>
 </li>
+<div>
+</div>
+<h2>SUPERHEROE ELIMINADO</h2>
+<h1>SE BORRO A: <li *ngFor="let heroe of eliminar; let i = index">
+{{ i + 1 }} - {{ heroe }}
+</li>
+
