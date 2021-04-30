@@ -1,0 +1,37 @@
+<h2>Villanos</h2>
+
+<h3>ESTADISTICAS DE VILLANOS</h3>
+<ul class="villanos">
+<li *ngFor="let villano of villanos" [class.selected]="villano === selectedVillano" (click)="onSelect(villano)">
+ <span class="badge">{{villano.id}}</span>{{villano.name}}
+</li>
+</ul>
+<div *ngIf="selectedVillano">
+ <h2>
+ {{selectedVillano.name | uppercase}}
+ </h2>
+ <ul class="villanos">
+ <li>
+ <label class="badge" for="villano-name">Nombre del villano: </label>
+ <span ></span>{{selectedVillano.name}}
+ </li>
+
+ <ul class="villanos">
+  <li>
+  <label class="badge" for="villano-name">poder: </label>
+  <span >{{selectedVillano.poder}}</span>
+  </li>
+
+ <ul class="villanos">
+ <li>
+ <label class="badge" for="villano-name">Nivel de poder: </label>
+ <span >{{selectedVillano.nivel+numero}}</span>
+ </li>
+ </ul>>
+ </ul>
+ </ul>
+<label for="hero-universo">  +  /  -   Poder: </label>
+ <button (click) = 'acumulador(base)'>+{{base}}</button>
+ <input id="hero-universo" placeholder={{selectedVillano.nivel+numero}}>
+ <button (click)='acumulador(-base)'>-{{base}}</button>
+</div>

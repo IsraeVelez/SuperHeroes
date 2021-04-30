@@ -6,15 +6,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { VillanoComponent } from './villano/villano.component';
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
-
-
-
+      VillanoComponent
    ],
   imports: [
     BrowserModule,
